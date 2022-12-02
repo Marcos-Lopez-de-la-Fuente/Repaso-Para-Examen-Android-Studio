@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+
+    <!--
+        style: Cambiar el estilo del TextInputLayout, en el ejemplo se muestra como el de Google
+        hint: Recomendación
+        startIconDrawable: Poner un icono
+        counterEnabled: Poner un contador de los carácteres que se infroducen
+        counterMaxLength: Máximo de carácteres que se verá al lado de los carácteres introducidos
+        helperText: Mensaje de ayuda al usuario (Como el "Required")
+
+     -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textFieldEmail"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        app:counterEnabled="true"
+        app:counterMaxLength="20"
+        app:helperText="*Required"
+        app:startIconDrawable="@drawable/ic_email">
+
+        <!--
+            inputType: Cambiar el teclado según el tipo de dato a introducir
+         -->
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <!--
+        endIconMode: Icono que se mostrará en el extremo derecho del TextInputLayout
+    -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textFieldPassword"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:hint="Password"
+        app:endIconMode="password_toggle"
+        app:startIconDrawable="@drawable/ic_lock">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/buttonMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PRESS" />
+
+
+    <!--
+        NORMAL
+    -->
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/materialCheckedBoxMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1" />
+
+
+    <!--
+        checked: pulsar predeterminadamente
+    -->
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="2" />
+
+
+    <!--
+        enabled: desabilitar sin poder pulsar y oscureciendolo
+    -->
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:text="3" />
+
+
+    <!--
+        style: Editar el estilo base
+    -->
+    <com.google.android.material.checkbox.MaterialCheckBox
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4" />
+
+
+    <!--
+        button: Cambiar el botón por otra cosa
+    -->
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:button="@drawable/ic_lock"
+        android:text="5" />
+
+
+    <!--
+        button: Quitar el botón
+    -->
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:button="@null"
+        android:text="6" />
+
+
+</LinearLayout>
